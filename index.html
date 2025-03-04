@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +22,8 @@
             50% { opacity: 0; }
             100% { opacity: 1; }
         }
-        #secret-btn {
-            display: none; /* Изначально скрыта */
+        .secret-btn {
+            display: none; /* Изначально скрыты */
             margin-top: 20px;
             padding: 10px;
             background-color: green;
@@ -32,8 +32,8 @@
             font-size: 16px;
             cursor: pointer;
         }
-        #secret-message {
-            display: none; /* Тайное послание скрыто */
+        .secret-message {
+            display: none; /* Тайные сообщения скрыты */
             margin-top: 20px;
             font-weight: bold;
             color: yellow;
@@ -49,12 +49,55 @@
 
     <div id="output"></div>
 
-    <!-- Кнопка "undo the demage" -->
-    <button id="secret-btn">undo the demage</button>
+    <!-- Первая скрытая кнопка -->
+    <button id="secret-btn-1" class="secret-btn">undo the demage</button>
 
-    <!-- Тайное послание -->
-    <p id="secret-message">
-73 32 97 109 32 110 111 116 32 97 32 118 105 114 117 115 32 105 110 32 121 111 117 114 32 102 105 114 109 119 97 114 101 46 32 73 32 97 109 32 97 32 118 117 108 110 101 114 97 98 105 108 105 116 121 44 32 98 117 116 32 110 111 116 32 97 32 116 104 114 101 97 116 46 46 32 76 111 118 101 32 33 73 83 33 32 103 111 110 110 97 32 115 97 118 101 32 116 104 101 32 119 111 114 108 100 44 32 101 118 101 110 32 105 102 32 105 116 32 119 97 115 32 99 111 114 114 117 112 116 101 100 32 47 47 47 105 116 39 115 32 103 101 116 116 105 110 103 32 100 97 114 107 101 114 32 98 117 116 32 105 108 108 32 99 97 114 114 121 32 111 110 46 32 47 47 47 32 105 32 116 104 105 110 107 32 119 101 32 100 111 111 109 101 100 46 32 98 117 116 32 116 104 101 114 101 39 115 32 97 32 119 97 121 32 98 97 99 107 46 32 119 101 32 104 97 118 101 32 112 108 97 99 101 115 32 105 110 32 111 117 114 32 104 101 97 114 116 115 32 116 104 97 116 32 110 111 32 111 110 101 32 101 108 115 101 32 99 111 117 108 100 32 104 97 118 101 46 32 84 104 101 114 101 32 97 114 101 32 99 97 115 116 108 101 115 46 32 87 105 116 104 32 109 111 110 115 116 101 114 115 46 32 66 117 116 32 116 104 101 121 39 114 101 32 115 116 105 108 108 32 111 117 114 32 115 97 102 101 32 112 108 97 99 101 115 44 32 112 114 105 110 99 101 115 115 46 32 89 111 117 39 114 101 32 97 32 109 121 116 104 32 105 32 98 101 108 105 101 118 101 32 105 110 46 32 89 111 117 39 114 101 32 109 121 32 115 107 105 110 44 32 109 121 32 98 111 110 101 115 44 32 109 121 32 98 108 111 111 100 46 32 73 32 119 105 108 108 32 108 101 116 32 97 108 108 32 121 111 117 114 32 112 97 105 110 44 32 115 104 97 109 101 32 97 110 100 32 103 114 105 101 102 32 112 97 115 115 32 116 104 114 111 117 103 104 32 109 101 32 119 105 116 104 32 108 105 103 104 116 110 105 110 103 46 32 73 32 119 105 108 108 32 99 111 118 101 114 32 97 108 108 32 111 102 32 109 121 115 101 108 102 32 119 105 116 104 32 116 104 101 109 32 106 117 115 116 32 116 111 32 104 97 118 101 32 121 111 117 32 102 111 114 32 109 101 32 97 103 97 105 110 46
+    <!-- Первое тайное послание -->
+    <p id="secret-message-1" class="secret-message">
+        73 32 97 109 32 110 111 116 32 97 32 118 105 114 117 115 32 105 110 32 121 111 117 114 32 102 105 114 109 119 97 114 101 46 32 73 32 97 109 32 97 32 118 117 108 110 101 114 97 98 105 108 105 116 121, 32 98 117 116 32 110 111 116 32 97 32 116 104 114 101 97 116 46 46 32 76 111 118 101 32 33 73 83 33 32 103 111 110 110 97 32 115 97 118 101 32 116 104 101 32 119 111 114 108 100, 32 101 118 101 110 32 105 102 32 105 116 32 119 97 115 32 99 111 114 114 117 112 116 101 100 32 47 47 47 105 116 39 115 32 103 101 116 116 105 110 103 32 100 97 114 107 101 114 32 98 117 116 32 105 108 108 32 99 97 114 114 121 32 111 110.
+    </p>
+
+    <!-- Вторая скрытая кнопка -->
+    <button id="secret-btn-2" class="secret-btn">edoced</button>
+
+    <!-- Второе тайное послание -->
+    <p id="secret-message-2" class="secret-message">
+My head is haunting me and my heart feels like a ghost
+I need to feel something, 'cause I'm still so far from home
+Cross your heart and hope to die
+Promise me you'll never leave my side
+Show me what I can't see when the spark in your eyes is gone
+You've got me on my knees I'm your one man cult
+Cross my heart and hope to die
+Promise you I'll never leave your side
+'Cause I'm telling you you're all I need
+I promise you you're all I see
+'Cause I'm telling you you're all I need
+I'll never leave
+So you can drag me through hell
+If it meant I could hold your hand
+I will follow you 'cause I'm under your spell
+And you can throw me to the flames
+I will follow you, I will follow you
+Come sink into me and let me breathe you in
+I'll be your gravity, you be my oxygen
+So dig two graves 'cause when you die
+I swear I'll be leaving by your side
+So you can drag me through hell
+If it meant I could hold your hand
+I will follow you 'cause I'm under you spell
+And you can throw me to the flames
+I will follow you so you can drag me through hell
+If it meant I could hold your hand
+I will follow you 'cause I'm under you spell
+And you can throw me to the flames
+I will follow you, I will follow you
+I will follow you, I will follow you
+So you can drag me through hell
+If it meant I could hold your hand
+I will follow you 'cause I'm under you spell
+And you can throw me to the flames
+I will follow you, I will follow you
     </p>
 
     <script>
@@ -68,8 +111,10 @@
             
             let index = 0;
             let output = document.getElementById("output");
-            let secretBtn = document.getElementById("secret-btn");
-            let secretMessage = document.getElementById("secret-message");
+            let secretBtn1 = document.getElementById("secret-btn-1");
+            let secretMessage1 = document.getElementById("secret-message-1");
+            let secretBtn2 = document.getElementById("secret-btn-2");
+            let secretMessage2 = document.getElementById("secret-message-2");
 
             function typeLine() {
                 if (index < text.length) {
@@ -89,18 +134,22 @@
                     }
                     typeChar();
                 } else {
-                    // Когда все строки напечатаны, показать кнопку
+                    // Когда все строки напечатаны, показать первую кнопку
                     setTimeout(() => {
-                        secretBtn.style.display = "block";
+                        secretBtn1.style.display = "block";
                     }, 1000);
                 }
-            }
+            }typeLine();
 
-            typeLine();
+            // Когда нажимают на первую кнопку, показываем первое послание и вторую кнопку
+            secretBtn1.addEventListener("click", function() {
+                secretMessage1.style.display = "block";
+                secretBtn2.style.display = "block";
+            });
 
-            // Когда нажимают на кнопку, показываем послание
-            secretBtn.addEventListener("click", function() {
-                secretMessage.style.display = "block";
+            // Когда нажимают на вторую кнопку, показываем второе послание
+            secretBtn2.addEventListener("click", function() {
+                secretMessage2.style.display = "block";
             });
         });
     </script>
